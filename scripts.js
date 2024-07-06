@@ -1,10 +1,13 @@
-// Example: Show an alert when the contact form is submitted
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for contacting me!');
+// Example JavaScript for additional interactivity
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll to sections
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
-    }
+    });
 });

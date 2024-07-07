@@ -14,15 +14,31 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1em 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
 }
 
 header h1 {
     margin: 0;
+    flex: 1;
 }
 
-
 /* Navigation styles with glowing effect */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -51,18 +67,6 @@ nav ul li a:hover::after {
     box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-
-
 /* Main content styles */
 main {
     padding: 20px;
@@ -74,11 +78,21 @@ h2 {
     padding-bottom: 10px;
 }
 
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 10px 0;
+    margin-right: 20px;
+}
+
+.profile-description {
+    font-size: 2.5em;
+    font-family: 'Dancing Script', cursive;
 }
 
 section {

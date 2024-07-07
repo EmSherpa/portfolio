@@ -83,8 +83,8 @@ h2 {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-right: 20px;
 }
@@ -192,3 +192,27 @@ footer {
         font-size: 1.5em;
     }
 }
+
+/* Resume section */
+#resume {
+    text-align: left;
+}
+
+.resume-download {
+    margin-top: 20px;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #555;
+}
+

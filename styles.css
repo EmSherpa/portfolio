@@ -195,7 +195,7 @@ footer {
 
 /* Resume section */
 #resume {
-    text-align: left;
+    text-align: center;
 }
 
 .resume-download {
@@ -213,6 +213,6 @@ footer {
 }
 
 .resume-button:hover {
-    background-color: #555;
+    background-color: #666;
 }
 

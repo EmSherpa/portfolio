@@ -48,12 +48,14 @@ nav {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
 }
 
 .nav-links a {
     color: white;
     font-weight: 600;
 }
+
 .nav-links a:hover {
     color: rgb(255, 225, 0);
     font-weight: 600;
@@ -144,7 +146,6 @@ nav {
 
 .service-card:hover {
     transform: translateY(-10px);
-    transform: scale(1.5px);
     background: rgb(244, 242, 242);
 }
 
@@ -228,9 +229,9 @@ footer {
     margin: 0 10px;
     font-weight: 600;
 }
+
 .social-links a:hover {
     color: #ffffff;
-    margin: 0 10px;
     font-weight: 1000;
 }
 
@@ -290,16 +291,105 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Header */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
 
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
     .about-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .service-list, .portfolio-grid {
+    .about img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bio {
+        text-align: center;
+    }
+
+    /* Services Section */
+    .service-list {
         grid-template-columns: 1fr;
+    }
+
+    .service-card:hover {
+        transform: none; /* Disable hover effects on mobile */
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact form {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+
+    .social-links a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* About Section */
+    .about img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Services Section */
+    .service-card {
+        padding: 15px;
+    }
+
+    /* Portfolio Section */
+    .portfolio-item {
+        padding: 15px;
+    }
+
+    /* Contact Section */
+    .contact input, .contact textarea {
+        padding: 8px;
+    }
+
+    .contact button {
+        padding: 8px 16px;
     }
 }

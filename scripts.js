@@ -34,3 +34,33 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(this);
+    const responseMessage = document.getElementById("form-response");
+
+    fetch("https://formspree.io/f/your-form-id", {
+        method: "POST",
+        body: formData,
+        headers: {
+            Accept: "application/json",
+        },
+    })
+        .then((response) => {
+            if (response.ok) {
+                responseMessage.textContent = "Message sent successfully!";
+                responseMessage.style.color = "green";
+                this.reset(); // Clear the form
+            } else {
+                responseMessage.textContent = "Failed to send message. Please try again.";
+                responseMessage.style.color = "red";
+            }
+        })
+        .catch((error) => {
+            responseMessage.textContent = "An error occurred. Please try again.";
+            responseMessage.style.color = "red";
+        });
+});

@@ -144,6 +144,8 @@ nav {
 
 .service-card:hover {
     transform: translateY(-10px);
+    transform: scale(1.5px);
+    background: rgb(244, 242, 242);
 }
 
 /* Portfolio Section */

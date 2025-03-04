@@ -44,7 +44,7 @@ header {
     color: var(--white-color);
     padding: 20px;
     text-align: center;
-    border-radius: 0 0 80px 80px;
+    border-radius: 0 0 60px 60px;
 }
 
 nav {
@@ -59,6 +59,14 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+}
+.logo-img{
+    position: relative;
+    top: 20px;
+    left: -10px;
+    width: 90px;
+    margin:0;
+    padding: 0;
 }
 
 .nav-links {
@@ -122,7 +130,7 @@ nav {
     transition: background 0.3s ease;
     padding: 10px 20px;
     background-color: var(--button-green);
-    color: var(--white-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 50px;
 }
@@ -165,7 +173,7 @@ nav {
     padding: 40px 20px;
     background: var(--white-color);
     text-align: center;
-    border-radius: 80px;
+    border-radius: 60px;
 }
 
 .service-list {
@@ -248,7 +256,7 @@ nav {
     background: var(--primary-color);
     color: var(--white-color);
     text-align: center;
-    border-radius: 80px 80px 0 0 ;
+    border-radius: 60px 60px 0 0 ;
 }
 
 .contact form {
@@ -318,18 +326,7 @@ footer {
     display: none;
     transition: all 0.5s ease;
 }
-.call-fixed-button{
-    position: fixed;
-    bottom: 15px;
-    left: 20px;
-    padding: 0;
-    transition: background 0.3s ease;
-}
-.call-fixed-button img{
-    width: 40px;
-    height: auto;
-    box-sizing: border-box;
-}
+
 
 .back-to-top:hover {
     background: rgb(59, 57, 57);
@@ -378,11 +375,11 @@ footer {
         gap: 10px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
 
+    .nav-links{
+        flex-direction: row;
+        font-size: 0.8em;
+    }
     .hero {
         padding: 60px 20px;
     }
@@ -394,6 +391,24 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+    .logo-img{
+        width: 70px;
+    }
+
+    .btn {
+        padding: 7px 10px;
+        border-radius: 50px;
+        font-weight: 550;
+    }
+
+    .call-button {
+        padding: 7px 10px;
+        border-radius: 50px;
+        font-weight: 550;
+    }
+
+
+
 
     /* About Section */
     .about-content {
@@ -444,10 +459,14 @@ footer {
     .hero h1 {
         font-size: 1.8rem;
     }
-
+    .nav-links{
+        flex-direction: row;
+        font-size: 0.8em;
+    }
     .hero p {
         font-size: 0.9rem;
     }
+
 
     /* About Section */
     .about img {
@@ -474,3 +493,12 @@ footer {
         padding: 8px 16px;
     }
 }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+
+

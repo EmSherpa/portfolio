@@ -12,7 +12,10 @@
     --link-hover: rgb(255, 225, 0);
 }
 
-
+*{
+    margin: 0;
+    padding: 0;
+}
 
 /* General Styles */
 body {
@@ -70,6 +73,47 @@ nav {
     padding: 0;
 }
 
+.sidebar{
+    display: none;
+    flex-direction: column;
+    background-color: rgba(188, 174, 16, 0.839);
+    backdrop-filter: blur(2px);
+    height: 50vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    /* justify-content: flex-start; */
+    /* align-content: flex-start; */
+    
+    padding:  20px 0px;
+}
+.sidebar li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 30px;
+    color: var(--primary-color);
+    width: 100%;
+    font-weight: 600;
+}
+.sidebar a{
+    width: 100%;
+    text-align: left;
+}
+.sidebar li:hover{
+    background-color: #00081442;
+    a{
+        text-decoration: underline;
+    }
+}
+.sidebar-item svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .nav-links {
     list-style: none;
     display: flex;
@@ -175,6 +219,7 @@ nav {
     background: var(--white-color);
     text-align: center;
     border-radius: 60px;
+    margin: 0 20px;
 }
 
 .service-list {
@@ -299,6 +344,10 @@ footer {
 
 .social-links {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .social-links a {
@@ -369,17 +418,15 @@ footer {
 }
 
 /* Responsive Design */
+@media (min-width:768px) {
+    .sidebar-item{
+        display: none;
+    }
+}
 @media (max-width: 768px) {
     /* Header */
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-
-    .nav-links{
-        flex-direction: row;
-        font-size: 0.8em;
+    .nav-link-item{
+        display: none;
     }
     .hero {
         padding: 60px 20px;
@@ -407,8 +454,6 @@ footer {
         border-radius: 50px;
         font-weight: 550;
     }
-
-
 
 
     /* About Section */
@@ -457,12 +502,19 @@ footer {
 
 @media (max-width: 480px) {
     /* Header */
+    .sidebar{
+        height: 100vh;
+        width: 100vw;
+    }
+
     .hero h1 {
         font-size: 1.8rem;
+        span{
+            font-size: 3rem;
+        }
     }
-    .nav-links{
-        flex-direction: row;
-        font-size: 0.8em;
+    .nav-link-item{
+       display: none;
     }
     .hero p {
         font-size: 0.9rem;

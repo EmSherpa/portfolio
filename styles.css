@@ -76,7 +76,7 @@ nav {
 .sidebar{
     display: none;
     flex-direction: column;
-    background-color: rgba(188, 174, 16, 0.839);
+    background-color: rgba(0, 0, 0, 0.836);
     backdrop-filter: blur(2px);
     height: 50vh;
     width: 250px;
@@ -86,8 +86,8 @@ nav {
     z-index: 999;
     /* justify-content: flex-start; */
     /* align-content: flex-start; */
-    
     padding:  20px 0px;
+    padding-top: 29px;
 }
 .sidebar li{
     list-style: none;
@@ -95,7 +95,7 @@ nav {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px 30px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     width: 100%;
     font-weight: 600;
 }
@@ -104,8 +104,9 @@ nav {
     text-align: left;
 }
 .sidebar li:hover{
-    background-color: #00081442;
+    background-color: #6b6a6a2d;
     a{
+        color: var(--white-color);
         text-decoration: underline;
     }
 }
@@ -163,16 +164,16 @@ nav {
     padding: 10px 20px;
     border-radius: 50px;
     font-weight: 600;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background: var(--secondary-hover);
+    background-color: var(--secondary-hover);
 }
 
 .call-button {
     font-weight: 600;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
     padding: 10px 20px;
     background-color: var(--button-green);
     color: var(--text-color);
